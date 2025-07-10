@@ -30,16 +30,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupButton(button: Button) {
         button.setOnClickListener {
-            getDogImageURL()
+            fetchDogImage()
         }
     }
 
-    private fun getDogImageURL() {
+    private fun fetchDogImage() {
         val client = AsyncHttpClient()
         val imageView = findViewById<ImageView>(R.id.petView)
         client["https://dog.ceo/api/breeds/image/random", object : JsonHttpResponseHandler() {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
+                Log.d("Dog", "response successful")
                 val petImageURL = json.jsonObject.getString("message")
+                Log.d("petImageURL", "pet image URL set: $petImageURL")
                 Glide.with(this@MainActivity)
                     .load(petImageURL)
                     .fitCenter()
