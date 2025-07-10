@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Random-Pets-Starter</string>
+    <string name="app_name">Random Pet</string>
+    <string name="pet_button_text">Get a random pet!</string>
+    <string name="pet_view_content_description">A photo of a pet</string>
 </resources>
