@@ -1,4 +1,4 @@
-package com.driuft.random_pets_starter
+package com.codepath.randompet
 
 import android.os.Bundle
 import android.util.Log

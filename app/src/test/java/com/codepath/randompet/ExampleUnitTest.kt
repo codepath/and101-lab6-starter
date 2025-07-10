@@ -1,4 +1,4 @@
-package com.ellenspertus.randompet
+package com.codepath.randompet
 
 import org.junit.Test
 

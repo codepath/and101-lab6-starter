@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ellenspertus.randompet"
+    namespace = "com.codepath.randompet"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ellenspertus.randompet"
+        applicationId = "com.codepath.randompet"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
