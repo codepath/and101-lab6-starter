@@ -36,15 +36,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchDogImage() {
         val client = AsyncHttpClient()
-        val imageView = findViewById<ImageView>(R.id.petView)
+        val imageView = findViewById<ImageView>(R.id.pet_view)
         client["https://dog.ceo/api/breeds/image/random", object : JsonHttpResponseHandler() {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
-                Log.d("Dog", "response successful")
+                Log.d("Dog", "response successful: $json")
                 val petImageURL = json.jsonObject.getString("message")
                 Log.d("petImageURL", "pet image URL set: $petImageURL")
                 Glide.with(this@MainActivity)
                     .load(petImageURL)
-                    .fitCenter()
+                    .centerCrop()
                     .into(imageView)
             }
 
